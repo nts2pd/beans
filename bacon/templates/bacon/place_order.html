@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Place Order</title>
+</head>
+<body>
+<h1>Place your order here!</h1>
+
+<form action="/bacon/place_order/" method="post">
+    {% csrf_token %}
+    <div>
+        <label>{{ form.first_name.label }}: </label>
+        {{ form.first_name }}
+    </div>
+    <br/>
+    <div>
+        <label>{{ form.last_name.label }}: </label>
+        {{ form.last_name }}
+    </div>
+    <br/>
+    <div>
+        <label>{{ form.favorite.label }}: </label>
+        {{ form.favorite }}
+    </div>
+    <br/>
+    <div>
+        <label>{{ form.entree.label }}: </label>
+        {{ form.entree }}
+    </div>
+    <br/>
+    <div>
+        <label>{{ form.side.label }}: </label>
+        {{ form.side }}
+    </div>
+    <br/>
+    <input type="submit" value="Place Order">
+</form>
+<br/>
+<a href="/bacon/">Home</a>
+
+</body>
+</html>

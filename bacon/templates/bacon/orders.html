@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Orders</title>
+</head>
+<body>
+<h1>{{ customer.first_name }} {{customer.last_name }}'s orders</h1>
+<ul>
+    {% for order in customer.order_set.all %}
+        <li>{{ order.get_entree_display }} with a side of {{ order.get_side_display }}: ${{ order.price }}</li>
+        <img src="/static/bacon/images/{{ order.get_entree_display }}.jpg" alt="image unavailable"
+        style="width:150px;height:100px;"/>
+        <img src="/static/bacon/images/{{ order.get_side_display }}.jpg" alt="image unavailable"
+        style=width:150px;height:100px;"/>
+    {% endfor %}
+</ul>
+<br/>
+<a href="/bacon/{{ customer.id }}/orders/order_again/">Place another order</a>
+<br/>
+<a href="/bacon/">Home</a>
+
+</body>
+</html>

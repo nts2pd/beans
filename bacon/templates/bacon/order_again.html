@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Back!</title>
+</head>
+<body>
+<h1>Welcome back! You know what to do ;)</h1>
+
+<form action="/bacon/{{ customer.pk }}/orders/order_again/" method="post">
+    {% csrf_token %}
+    <div>
+        <label>{{ form.entree.label }}: </label>
+        {{ form.entree }}
+    </div>
+    <br/>
+    <div>
+        <label>{{ form.side.label }}: </label>
+        {{ form.side }}
+    </div>
+    <br/>
+    <input type="submit" value="Place Order">
+</form>
+<br/>
+<a href="/bacon/{{ customer.pk }}/orders/">Review your orders</a>
+<br/>
+<a href="/bacon/">Home</a>
+</body>
+</html>

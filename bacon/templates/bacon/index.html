@@ -1,0 +1,26 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'bacon/style.css' %}">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Page</title>
+</head>
+<body>
+<h1>Welcome to the Restaurant Page!</h1>
+<div class="custlist">
+    {% if latest_order_list %}
+    <ul>
+        {% for customer in latest_order_list %}
+        <li><a href="/bacon/{{ customer.id }}/">{{ customer.last_name }}</a> </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>No orders available.</p>
+    {% endif %}
+</div>
+<br/>
+<h4><a id="porder" href="/bacon/place_order/">Click here to place your order!</a></h4>
+</body>
+</html>
