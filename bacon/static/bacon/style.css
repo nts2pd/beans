@@ -1,0 +1,48 @@
+body {
+    background: url("images/restaurant.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+h1 { color: #d54d7b; 
+    font-family: "Great Vibes", cursive; 
+    font-size: 70px; 
+    line-height: 160px; 
+    font-weight: normal; 
+    margin-bottom: 0px; 
+    margin-top: 40px; 
+    text-align: center; 
+    text-shadow: 0 1px 1px #fff; }
+
+li {
+    /* background-color: #EEEEEE; */
+    background-image: linear-gradient( 
+                    grey, 
+                    azure);
+    border: 1px solid #DDDDDD;
+    text-align: center;
+    width: 200px;
+    border-radius: 25px;
+}
+
+#porder {
+    color: red;
+}
+
+h4 {
+    text-align: center;
+}
+
+.custlist {
+    text-align: center;
+}
+.custlist ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    *display: inline;
+    list-style-type: none;
+}
+
