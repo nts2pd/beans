@@ -25,7 +25,7 @@ SECRET_KEY = 's(cw4+g^%1fi6*zkwb)e*)d)pjbn$hj!1sw*v&pnoyc2h9cks4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['nts2pd.pythonanywhere.com']
 
 
 # Application definition
